@@ -2,21 +2,23 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\StateResource\Pages;
-use App\Filament\Resources\StateResource\RelationManagers;
-use App\Models\State;
 use Filament\Forms;
-use Filament\Resources\Form;
-use Filament\Resources\Resource;
-use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-
-use Filament\Forms\Components\TextInput;
+use App\Models\State;
+use Filament\Resources\Form;
+use Filament\Resources\Table;
+use Filament\Resources\Resource;
 use Filament\Forms\Components\Card;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
+
+use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\StateResource\Pages;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\StateResource\RelationManagers;
+use App\Filament\Resources\StateResource\RelationManagers\CitiesRelationManager;
+use App\Filament\Resources\StateResource\RelationManagers\StudentsRelationManager;
 
 class StateResource extends Resource
 {
@@ -24,7 +26,7 @@ class StateResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
-    protected static ?string $navigationGroup = 'Student Management';
+    protected static ?string $navigationGroup = 'Information Management';
 
     public static function form(Form $form): Form
     {
@@ -65,6 +67,8 @@ class StateResource extends Resource
     {
         return [
             //
+            StudentsRelationManager::class,
+            CitiesRelationManager::class,
         ];
     }
     
