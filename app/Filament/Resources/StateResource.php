@@ -13,6 +13,11 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Card;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\Select;
+
 class StateResource extends Resource
 {
     protected static ?string $model = State::class;
@@ -24,6 +29,12 @@ class StateResource extends Resource
         return $form
             ->schema([
                 //
+                Card::make()
+                    ->schema([
+                        Select::make('country_id',)
+                            ->relationship('country', 'name')->required(),
+                        TextInput::make('name')->required()->maxLength(255)
+                    ])
             ]);
     }
 
@@ -32,6 +43,10 @@ class StateResource extends Resource
         return $table
             ->columns([
                 //
+                TextColumn::make('id')->sortable(),
+                TextColumn::make('name')->sortable()->searchable(),
+                TextColumn::make('country.name')->sortable(),
+                TextColumn::make('created_at')->dateTime()
             ])
             ->filters([
                 //
