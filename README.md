@@ -1,8 +1,18 @@
-# Final Project Description: HCMUS AUT Student Management System using Laravel
+# CS204 - Advanced Web Programming Final Project
+
+| Table of Content |
+| --- |
+| I/ [Project Summary](#project-summary) |
+| II/ [Key Features](#key-features) |
+| III/ [Conclusion](#conclusion) |
+| IV/ [Demo](#demo) |
+_____
+
+## I/ <a id='project-summary'></a>Project Summary
 
 In my final project for Advanced Web Programming, I will develop a Student Management System specifically designed for HCMUS AUT (Ho Chi Minh City University of Science - Auckland University of Technology). The system will be developed using the Laravel framework and will incorporate several key features. The project will showcase my ability to implement the Model-View-Controller (MVC) architectural pattern, perform full CRUD operations, implement user authentication, and create a real-time dashboard with panels and charts.
 
-### Key Features:
+## II/ <a id='key-features'></a>Key Features
 
 * MVC Architecture:
 
@@ -30,7 +40,13 @@ Display panels with important metrics, such as the total number of students, cou
 Generate charts and visualizations to represent data trends, such as enrollment statistics over time or distribution of students across departments.
 Make use of charting libraries (e.g., Chart.js) to create visually appealing and informative charts.
 
+## III/ <a id='conclusion'></a>Conclusion
+
 In conclusion, this project will allow users and administrators to effectively manage student-related information and provide valuable insights through the interactive dashboard.
 
-And here is the Admin Dashboard:
+## IV <a id='demo'></a> Demo
+* And here is the Admin Dashboard:
 ![](AdminDashBoard.png)
+
+* Update the student information by choosen Department (Computer Science)
+![](UpdateStudentInfoViaDepartment.png)
