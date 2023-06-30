@@ -40,7 +40,7 @@ class CityResource extends Resource
                             ->required(),
                         TextInput::make('name')
                             ->required()
-                            ->maxLength(255)
+                            ->maxLength(255)->unique('cities', 'name')
                     ])
             ]);
     }

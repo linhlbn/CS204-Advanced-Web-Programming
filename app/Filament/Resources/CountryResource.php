@@ -39,7 +39,7 @@ class CountryResource extends Resource
                             ->maxLength(3),
                         TextInput::make('name')
                             ->required()
-                            ->maxLength(255)
+                            ->maxLength(255)->unique('countries', 'name')
                     ])
             ]);
     }

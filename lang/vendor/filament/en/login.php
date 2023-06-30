@@ -2,7 +2,7 @@
 
 return [
 
-    'title' => 'Login',
+    'title' => '',
 
     'heading' => 'Sign in to your account',
 
@@ -17,7 +17,7 @@ return [
     'fields' => [
 
         'email' => [
-            'label' => 'Email address',
+            'label' => 'Admin Email address',
         ],
 
         'password' => [

@@ -40,4 +40,6 @@ switch ($width) {
             {{ $content }}
         </div>
     </div>
+    
+    
 </div>

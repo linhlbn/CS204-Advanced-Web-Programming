@@ -43,7 +43,8 @@ class UserResource extends Resource
                         TextInput::make('email')
                             ->label('Email Address')
                             ->required()
-                            ->maxLength(255),
+                            ->maxLength(255)
+                            ->unique('users', 'email'),
                         TextInput::make('password')
                             ->password()
                             ->required(fn (Page $livewire): bool => $livewire instanceof CreateRecord)
