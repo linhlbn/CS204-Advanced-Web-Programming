@@ -31,3 +31,6 @@ Generate charts and visualizations to represent data trends, such as enrollment 
 Make use of charting libraries (e.g., Chart.js) to create visually appealing and informative charts.
 
 In conclusion, this project will allow users and administrators to effectively manage student-related information and provide valuable insights through the interactive dashboard.
+
+And here is the Admin Dashboard:
+![](AdminDashBoard.png)
