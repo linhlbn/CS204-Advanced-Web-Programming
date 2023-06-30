@@ -14,12 +14,18 @@ class StudentChartPie extends PieChartWidget
     {
         // Define an array of pastel colors
         $colors = [
-            'rgba(255, 179, 186, 0.9)', 'rgba(255, 209, 220, 0.9)', 
-            'rgba(255, 229, 217, 0.9)', 'rgba(255, 253, 230, 0.9)', 
-            'rgba(230, 255, 238, 0.9)', 'rgba(207, 247, 246, 0.9)', 
-            'rgba(207, 226, 243, 0.9)', 'rgba(224, 210, 233, 0.9)', 
-            'rgba(235, 214, 255, 0.9)', 'rgba(255, 218, 242, 0.9)', 
-            'rgba(255, 227, 215, 0.9)', 'rgba(245, 245, 245, 0.9)'
+            'rgba(238, 136, 138, 0.9)',  // Light pink
+            'rgba(237, 161, 177, 0.9)',  // Light coral
+            'rgba(243, 183, 154, 0.9)',  // Light apricot
+            'rgba(250, 207, 155, 0.9)',  // Light peach
+            'rgba(223, 230, 193, 0.9)',  // Light pistachio
+            'rgba(192, 233, 229, 0.9)',  // Light aqua
+            'rgba(182, 199, 230, 0.9)',  // Light lavender
+            'rgba(213, 183, 221, 0.9)',  // Light mauve
+            'rgba(234, 189, 242, 0.9)',  // Light lavender blush
+            'rgba(248, 187, 225, 0.9)',  // Light orchid pink
+            'rgba(255, 212, 199, 0.9)',  // Light salmon
+            'rgba(232, 232, 232, 0.9)',  // Light gray
         ];
 
         $studentsByDepartment = Student::select('department_id')
@@ -34,11 +40,14 @@ class StudentChartPie extends PieChartWidget
         $labels = [];
         $data = [];
         $backgroundColor = [];
+        $hoverBackgroundColor = [];
         foreach ($studentsByDepartment as $departmentId => $count) {
             $departmentName = Department::find($departmentId)->name; 
             $labels[] = $departmentName;
             $data[] = $count;
-            $backgroundColor[] = $colors[$departmentId % count($colors)];  // Cycle colors
+            $color = $colors[$departmentId % count($colors)];  // Cycle colors
+            $backgroundColor[] = $color;
+            $hoverBackgroundColor[] = str_replace('0.9', '0.7', $color); // lighter color on hover
         }
 
         return [
@@ -47,6 +56,9 @@ class StudentChartPie extends PieChartWidget
                 [
                     'data' => $data,
                     'backgroundColor' => $backgroundColor,
+                    'hoverBackgroundColor' => $hoverBackgroundColor, // added attribute
+                    'borderColor' => '#fff', // white border
+                    'borderWidth' => 2, // border width
                 ],
             ],
         ];

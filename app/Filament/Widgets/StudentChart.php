@@ -13,8 +13,6 @@ class StudentChart extends BarChartWidget
         self::$heading = 'Students joined University this year - '.date('Y');
     }
 
-    // protected static ?string $heading = 'Student Join University this year';
-
     protected function getData(): array
     {
         // Define an array of pastel colors
@@ -48,6 +46,11 @@ class StudentChart extends BarChartWidget
                 'backgroundColor' => $colors[$colorIndex],
                 'borderColor' => str_replace('0.5', '1', $colors[$colorIndex]), // use the same color but not transparent
                 'borderWidth' => 1,
+                'hoverBackgroundColor' => str_replace('0.9', '0.7', $colors[$colorIndex]), // lighter color on hover
+                'hoverBorderColor' => str_replace('0.5', '1', $colors[$colorIndex]), // same as borderColor
+                'hoverBorderWidth' => 1.5, // slightly thicker border on hover
+                'hoverBorderRadius' => 3, // rounded edges on hover
+                'barPercentage' => 0.5, // half-width bars
             ];
         }
 
