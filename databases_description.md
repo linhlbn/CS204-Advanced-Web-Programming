@@ -55,9 +55,9 @@ Departments:
 * name: The name of the department.
 * created_at: The timestamp indicating when the department record was created.
 * updated_at: The timestamp indicating when the department record was last updated.
-* Note: The table structures provided assume a one-to-many relationship, where each student belongs to one country, one state, one city, and one department.
+
 
 ---
 
-
+Here is Entity Relationship Diagram (ERD):
 ![](ERD_diagram.png)
