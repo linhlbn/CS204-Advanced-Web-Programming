@@ -85,8 +85,8 @@ Make use of charting libraries (Chart.js) to create visually appealing and infor
 9. Run the server: Now everything is set up. Start the server:
 <br>
 ` $ php artisan serve `
+    <br>The application should be available at http://localhost:8000 or http://127.0.0.1:8001/.
 
-    The application should be available at http://localhost:8000 or http://127.0.0.1:8001/.
 10.  Compile assets: Make sure CSS & JavaScript files works, run command: <br>
 `$ npm run dev`
 
