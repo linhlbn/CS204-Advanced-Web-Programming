@@ -65,28 +65,29 @@ Make use of charting libraries (Chart.js) to create visually appealing and infor
 3. Install Laravel: <br>
     ` $ composer global require "laravel/installer" `
 
-4. Install Project Dependencies: Navigate to the project directory in your terminal or command prompt and run the following command to install all the required dependencies: <br> `$ composer install ` 
+4. Install Project Dependencies: Navigate to the project directory in your terminal or command prompt and run the following command to install all the required dependencies: <br> ` $ composer install ` 
 
 5. Install Node.js and NPM: run commands: <br> `$ npm install`
 
 6. Set up the environment file: Make a copy of the .env.example file in the project root directory and rename it to .env.
-<br>
-`$ cp .env.example .env ` 
-<br>
-Open the .env file and fill in your database details. Be sure to run the database yourself also.
+    <br>
+    ` $ cp .env.example .env ` 
+
+
+    Open the .env file and fill in your database details. Be sure to run the database yourself also.
 
 7. Generate application key: Laravel requires an application encryption key. This can be generated using the following command:
-<br> `$ php artisan key:generate `
+<br> ` $ php artisan key:generate `
 
 8. Run migrations: To create the database tables, use command:
-<br> `$ php artisan migrate`
+<br> ` $ php artisan migrate`
 
 9. Run the server: Now everything is set up. Start the server:
 <br>
-`$ php artisan serve`
+` $ php artisan serve `
 
     The application should be available at http://localhost:8000 or http://127.0.0.1:8001/.
-10. Compile assets: Make sure CSS & JavaScript files works, run command: <br>
+10.  Compile assets: Make sure CSS & JavaScript files works, run command: <br>
 `$ npm run dev`
 
 
