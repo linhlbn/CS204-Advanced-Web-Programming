@@ -5,7 +5,7 @@
 | I/ [Project Summary](#project-summary) |
 | II/ [Key Features](#key-features) |
 | III/ [Project Design and Architecture](#Project-Design-and-Architecture) |
-| V/ [Installation](#installation) |
+| IV/ [Installation](#installation) |
 | V/ [Demo](#demo) |
 _____
 
