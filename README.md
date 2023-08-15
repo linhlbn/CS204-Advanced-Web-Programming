@@ -104,3 +104,6 @@ Make use of charting libraries (Chart.js) to create visually appealing and infor
 
 * Update the student information by choosen Department (Computer Science)
 ![](UpdateStudentInfoViaDepartment.png)
+
+* Check API for retriving student information
+![](APIforStudent.png)
